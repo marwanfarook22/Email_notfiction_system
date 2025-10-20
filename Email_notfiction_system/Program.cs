@@ -1,27 +1,47 @@
-﻿
-
-
+﻿using Email_notfiction_system.Interfaces;
 using Email_notfiction_system.Models;
-using Email_notfiction_system.Third_Party_Services;
 
-var Email = new EmailMessage
+UserInterActions userInterActions = new();
+ThirdPartyServiceFactroy thirdParty_Service_Factroy = new ThirdPartyServiceFactroy();
+NotfictionMangerFactroy notfictionManger_Factroy = new NotfictionMangerFactroy();
+
+
+UserInterfaces.ShowMessage("╔════════════════════════════════════════╗");
+UserInterfaces.ShowMessage("║     Email Notification System - Demo   ║");
+UserInterfaces.ShowMessage("╚════════════════════════════════════════╝");
+
+UserInterfaces.ThirdPartyServiceSelection();
+
+var userSelection = userInterActions.GetUserInput_ThirdPartyOptions();
+EmailMessage email = userInterActions.GetEmail();
+UserInterfaces.DisplayMenu();
+var Menuselection = userInterActions.GetUserInput_MainMenuOptions();
+
+IEmailService service = thirdParty_Service_Factroy.GetThirdPartyService(userSelection, email);
+
+
+if (service != null)
 {
-    Body = "Hello There <y Name is marwan iam 21 age",
-    From = "Marwan",
-    To = "Moahmed Farook",
-    Subject = "Welcome Message "
+    EmailResult result = service.SendEmail(email);
 
-};
+    if (result.Success)
+    {
+        UserInterfaces.ShowMessage("Email sent successfully!");
+        notfictionManger_Factroy.GetNotfictionManager(service, Menuselection, email);
+    }
+    else
+    {
+        UserInterfaces.ShowMessage($"Failed: {result.ErrorMessage}");
+    }
+}
 
 
-SendGripApi sendGripApi = new SendGripApi("");
-SendGripApi_Adaptor emailService = new SendGripApi_Adaptor(sendGripApi);
+UserInterfaces.ShowMessage("╔════════════════════════════════════════╗");
+UserInterfaces.ShowMessage("║  Demo Complete!                        ║");
+UserInterfaces.ShowMessage("╚════════════════════════════════════════╝");
+UserInterfaces.ShowMessage("");
+UserInterfaces.ShowMessage("Press any key to exit...");
 
-Console.WriteLine(" Is it Valid apiKey " + emailService.IsvalidEmail());
-var respnse = emailService.SendEmail(Email);
 
-Console.WriteLine(" Email Sent SuccessFully : " + respnse.Success);
-Console.WriteLine("Email Message Id : " + respnse.MessageId);
-Console.WriteLine("Email Eroor Message " + respnse.ErrorMessage);
 
 Console.ReadKey();

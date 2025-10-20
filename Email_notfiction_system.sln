@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Email_notfiction_system", "Email_notfiction_system\Email_notfiction_system.csproj", "{3789676F-DEF1-4DC0-9950-348770EBF078}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notfiction_Test_Manger", "Notfiction_Test_Manger\Notfiction_Test_Manger.csproj", "{9F12E3CA-E5C7-4B46-9B80-21E7796E57B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{3789676F-DEF1-4DC0-9950-348770EBF078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3789676F-DEF1-4DC0-9950-348770EBF078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3789676F-DEF1-4DC0-9950-348770EBF078}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F12E3CA-E5C7-4B46-9B80-21E7796E57B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F12E3CA-E5C7-4B46-9B80-21E7796E57B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F12E3CA-E5C7-4B46-9B80-21E7796E57B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F12E3CA-E5C7-4B46-9B80-21E7796E57B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

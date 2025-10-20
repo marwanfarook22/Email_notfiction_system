@@ -10,7 +10,7 @@ namespace Email_notfiction_system.Interfaces;
 public interface IEmailService
 {
     EmailResult SendEmail(EmailMessage emailMessage);
-    public bool IsvalidEmail();
+    public bool ValidateConnection();
 }
 
 
