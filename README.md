@@ -381,7 +381,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **MarwanFarouq**
 - GitHub: [@MarwanFarouq](https://github.com/marwanfarook22)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/marwan-farook-411154314/)
+- LinkedIn: [@MarwanFarouq](https://www.linkedin.com/in/marwan-farook-411154314/)
 
 ## 🙏 Acknowledgments
 
